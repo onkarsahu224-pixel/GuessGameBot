@@ -3,8 +3,8 @@ import os
 API_ID = int(os.environ.get("30668518", "0"))
 API_HASH = os.environ.get("21074cfa32d2d0d8e18c95c0c0a72054", "")
 BOT_TOKEN = os.environ.get("8916346588:AAGhkQiSoo8_5xch_v7grqKkoCPHV3ZsYSw", "")
-MONGO_URI = os.environ.get("MONGO_URI", "")
-MONGO_DB_NAME = os.environ.get("MONGO_DB_NAME", "guessbot")
+MONGO_URI = os.environ.get("mongodb+srv://onkarsahu224_db_user:Flu2dncFuAZtfRfF@cluster0.i2mi0k4.mongodb.net", "")
+MONGO_DB_NAME = os.environ.get("onkarsahu224_db_user", "guessbot")
 
 # Owner user_id (Telegram numeric ID) - has full control, can add other admins
 OWNER_ID = int(os.environ.get("OWNER_ID", "0"))
