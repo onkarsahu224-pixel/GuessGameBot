@@ -1,16 +1,16 @@
 import os
 
-API_ID = int(os.environ.get("API_ID", "0"))
-API_HASH = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+API_ID = int(os.environ.get("30668518", "0"))
+API_HASH = os.environ.get("21074cfa32d2d0d8e18c95c0c0a72054", "")
+BOT_TOKEN = os.environ.get("8916346588:AAGhkQiSoo8_5xch_v7grqKkoCPHV3ZsYSw", "")
 MONGO_URI = os.environ.get("MONGO_URI", "")
 MONGO_DB_NAME = os.environ.get("MONGO_DB_NAME", "guessbot")
 
 # Owner user_id (Telegram numeric ID) - has full control, can add other admins
 OWNER_ID = int(os.environ.get("OWNER_ID", "0"))
 
-SUPPORT_GROUP_LINK = os.environ.get("SUPPORT_GROUP_LINK", "https://t.me/InfiniteSelller")
-DEVELOPER_USERNAME = os.environ.get("DEVELOPER_USERNAME", "Crew_allied")
+SUPPORT_GROUP_LINK = os.environ.get("SUPPORT_GROUP_LINK", "https://t.me/rareholds")
+DEVELOPER_USERNAME = os.environ.get("DEVELOPER_USERNAME", "ownerxaura07")
 
 # Game timing (seconds)
 GUESS_WINDOW_SECONDS = int(os.environ.get("GUESS_WINDOW_SECONDS", "20"))
