@@ -1,5 +1,7 @@
 import asyncio
 import logging
+import re
+import unicodedata
 
 from pyrogram import filters
 from pyrogram.types import Message, ChatMemberUpdated
@@ -137,11 +139,25 @@ async def stopgame_cmd(client, message: Message):
     await message.reply_text("⏸ Game paused. Use /startgame to resume.")
 
 
+import re
+import unicodedata
+
+
+def _normalize_text(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text)
+    text = text.lower()
+    text = re.sub(r"[^a-z0-9]+", "", text)
+    return text
+
+
 def _is_guess_match(guess: str, name: str) -> bool:
-    guess = guess.strip().lower()
+    guess = _normalize_text(guess)
+    name = _normalize_text(name)
+
     if len(guess) < 2:
         return False
-    return guess in name.lower()
+
+    return guess in name
 
 
 @app.on_message(filters.text & filters.group & ~filters.via_bot & ~filters.regex(r"^/"))
